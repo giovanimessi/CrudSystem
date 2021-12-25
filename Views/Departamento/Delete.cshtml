@@ -1,0 +1,39 @@
+﻿@model CrudSystem.Models.Departamento
+
+@{
+    ViewData["Title"] = "Deletar Departamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h3><h1>@ViewData["Title"]</h1></h3>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form method="post" asp-action="DeleteDepartamento">
+                <input type="hidden" asp-for="CODIGO" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="NOME" class="controle-label">Nome</label>
+                    <input asp-for="NOME" class="form-control" placeholder="Digite o nome do Departamento"disabled/>
+                    <span asp-validation-for="NOME" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+
+                    <input type="submit" value="Deletar Departamento" class="btn btn-danger" />
+
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
