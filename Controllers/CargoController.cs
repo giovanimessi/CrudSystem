@@ -17,7 +17,8 @@ namespace CrudSystem.Controllers
         {
             _context = context;
         }
-
+        
+        //exibir dado all
         public IActionResult Index()
         {
             IEnumerable<Cargo> listCargo = _context.Cargo;

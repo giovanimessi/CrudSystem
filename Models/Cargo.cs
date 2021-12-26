@@ -17,11 +17,19 @@ namespace CrudSystem.Models
         [Display(Name = "NomeCargo")]
         public string Nome_Cargo { get; set; }
 
+        //sobre departamento
         public int CODIGO { get; set; }
+
+
+        [Required]
         public virtual Departamento deprtamento { get; set; }
 
 
 
 
     }
+    public enum deprtamento{
+        Engenharia,Urbanismo,Transporte
+
+        }
 }
