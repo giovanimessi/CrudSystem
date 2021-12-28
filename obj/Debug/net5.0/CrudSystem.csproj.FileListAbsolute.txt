@@ -441,3 +441,5 @@ C:\Users\giova\source\repos\CrudSystem\bin\Debug\net5.0\PagedList.dll
 C:\Users\giova\source\repos\CrudSystem\bin\Debug\net5.0\PagedList.Mvc.dll
 C:\Users\giova\source\repos\CrudSystem\obj\Debug\net5.0\Razor\Views\Cargo\Index.cshtml.g.cs
 C:\Users\giova\source\repos\CrudSystem\obj\Debug\net5.0\Razor\Views\Cargo\Create.cshtml.g.cs
+C:\Users\giova\source\repos\CrudSystem\obj\Debug\net5.0\Razor\Views\Funcionario\Index.cshtml.g.cs
+C:\Users\giova\source\repos\CrudSystem\obj\Debug\net5.0\Razor\Views\Projeto\Index.cshtml.g.cs

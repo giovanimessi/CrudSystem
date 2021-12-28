@@ -18,8 +18,9 @@ namespace CrudSystem.Models
         [Display(Name = "Nome_Cargo")]
         public string Nome_Cargo { get; set; }
 
+        public virtual Departamento Departamento { get; set; }
 
-        public virtual Departamento departamento {get;set;}
+
     }
    
 }
