@@ -1,6 +1,7 @@
 ﻿using CrudSystem.Data;
 using CrudSystem.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace CrudSystem.Controllers
 {
     public class CargoController : Controller
     {
+       
         private readonly AplicationDbContext _context;
 
 
@@ -17,7 +19,7 @@ namespace CrudSystem.Controllers
         {
             _context = context;
         }
-        
+
         //exibir dado all
         public IActionResult Index()
         {
@@ -25,9 +27,34 @@ namespace CrudSystem.Controllers
 
             return View(listCargo);
         }
+        //httpget CREATE do Cargo
         public IActionResult Create()
         {
 
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult Create(Cargo cargo)
+
+        {
+
+
+            var model = new Cargo();
+
+            if (ModelState.IsValid)
+            {
+                _context.Cargo.Add(cargo);
+                _context.SaveChanges();
+
+                TempData["mensaje"] = "Cadastrado com sucesso!";
+
+                return RedirectToAction("Index");
+
+
+            }
             return View();
         }
     }

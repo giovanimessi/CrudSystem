@@ -16,10 +16,10 @@ namespace CrudSystem.Models
         [Display(Name = "NOME")]
         public string NOME { get; set; }
 
-        public virtual ICollection<Cargo> cargos { get; set; }
-
+        public virtual ICollection<Cargo> Cargo { get; set; }
 
     }
 
 
 }
+

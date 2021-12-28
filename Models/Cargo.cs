@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,22 +15,11 @@ namespace CrudSystem.Models
 
         [Required(ErrorMessage = "Minimo de caractere 5")]
         [StringLength(100, ErrorMessage = "DEVE TER A O MENOR {2} caracteres")]
-        [Display(Name = "NomeCargo")]
+        [Display(Name = "Nome_Cargo")]
         public string Nome_Cargo { get; set; }
 
-        //sobre departamento
-        public int CODIGO { get; set; }
 
-
-        [Required]
-        public virtual Departamento deprtamento { get; set; }
-
-
-
-
+        public virtual Departamento departamento {get;set;}
     }
-    public enum deprtamento{
-        Engenharia,Urbanismo,Transporte
-
-        }
+   
 }
