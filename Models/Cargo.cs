@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CrudSystem.Models
 {
@@ -11,6 +6,7 @@ namespace CrudSystem.Models
     {
         [Key]
         public int CargoId { get; set; }
+        public int DepartamentoId { get; set; }
 
 
         [Required(ErrorMessage = "Minimo de caractere 5")]

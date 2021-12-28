@@ -1,1 +1,8 @@
 ﻿
+<select>
+    @{
+        foreach(var departamento in ViewBag.Departamentos){
+            <option value="@departamento.CODIGO">@departamento.NOME</option>
+        }
+    }
+</select>

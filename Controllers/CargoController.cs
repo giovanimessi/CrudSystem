@@ -27,10 +27,11 @@ namespace CrudSystem.Controllers
 
             return View(listCargo);
         }
+
         //httpget CREATE do Cargo
         public IActionResult Create()
         {
-
+            ViewBag.Departamentos = _context.Departamento.ToList();
             return View();
         }
 
